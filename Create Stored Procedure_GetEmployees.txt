@@ -1,0 +1,21 @@
+USE [TestDB]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GetEmployees]    Script Date: 7/6/2018 10:05:48 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE Procedure [dbo].[GetEmployees](@City Varchar(50)=Null)  
+as  
+begin  
+If @City Is Null
+   select *from Employee  
+Else 
+   select *from Employee where City = @City 
+End
+GO
+
+

@@ -1,0 +1,23 @@
+USE [TestDB]
+GO
+
+/****** Object:  StoredProcedure [dbo].[AddNewEmpDetails]    Script Date: 7/6/2018 10:05:29 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+Create procedure [dbo].[AddNewEmpDetails]  
+(  
+   @Name varchar (50),  
+   @City varchar (50),  
+   @Address varchar (50)  
+)  
+as  
+begin  
+   Insert into Employee values(@Name,@City,@Address)  
+End 
+GO
+
+
